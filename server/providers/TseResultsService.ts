@@ -1,6 +1,6 @@
-import { rankCandidates, type UnrankedCandidate } from '../../shared/election';
-import type { ElectionSnapshot } from '../../shared/types';
-import { ProviderUnavailableError, type ElectionProvider, type ProviderResult } from './ElectionProvider';
+import { rankCandidates, type UnrankedCandidate } from '../../shared/election.js';
+import type { ElectionSnapshot } from '../../shared/types.js';
+import { ProviderUnavailableError, type ElectionProvider, type ProviderResult } from './ElectionProvider.js';
 
 /**
  * Fonte oficial: arquivos JSON publicados pelo TSE.

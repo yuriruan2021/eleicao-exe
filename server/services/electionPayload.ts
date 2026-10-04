@@ -1,8 +1,8 @@
-import { getElectionStatus } from '../../shared/election';
-import { buildNarratorEvents } from '../../shared/narrator';
-import { OFFICIAL_SOURCE } from '../../shared/source';
-import type { DataMode, ElectionPayload } from '../../shared/types';
-import type { ProviderResult } from '../providers/ElectionProvider';
+import { getElectionStatus } from '../../shared/election.js';
+import { buildNarratorEvents } from '../../shared/narrator.js';
+import { OFFICIAL_SOURCE } from '../../shared/source.js';
+import type { DataMode, ElectionPayload } from '../../shared/types.js';
+import type { ProviderResult } from '../providers/ElectionProvider.js';
 
 export function buildElectionPayload(mode: DataMode, result: ProviderResult, generatedAt: Date): ElectionPayload {
   const current = result.history.at(-1) ?? null;

@@ -1,4 +1,4 @@
-import type { CandidateResult, ElectionSnapshot, ElectionStatus } from './types';
+import type { CandidateResult, ElectionSnapshot, ElectionStatus } from './types.js';
 
 const ADVANCED_TOTALIZATION_PERCENTAGE = 50;
 

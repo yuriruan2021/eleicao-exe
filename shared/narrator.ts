@@ -1,6 +1,6 @@
-import { getDuel, type Duel } from './election';
-import { formatPercentage, formatPp, formatVotes } from './format';
-import type { ElectionSnapshot, NarratorEvent, NarratorEventKind } from './types';
+import { getDuel, type Duel } from './election.js';
+import { formatPercentage, formatPp, formatVotes } from './format.js';
+import type { ElectionSnapshot, NarratorEvent, NarratorEventKind } from './types.js';
 
 /** Faixas de diferença (p.p.) que geram eventos ao serem cruzadas. */
 const MARGIN_THRESHOLDS_PP = [5, 3, 1, 0.5] as const;

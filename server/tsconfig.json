@@ -12,5 +12,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": [".", "../shared"]
+  "include": [".", "../shared", "../api"]
 }

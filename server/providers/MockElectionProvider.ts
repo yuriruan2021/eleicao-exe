@@ -1,7 +1,7 @@
-import type { DemoScenario } from '../../shared/demo';
-import { rankCandidates, type UnrankedCandidate } from '../../shared/election';
-import type { ElectionSnapshot } from '../../shared/types';
-import { ProviderUnavailableError, type ElectionProvider, type ProviderResult } from './ElectionProvider';
+import type { DemoScenario } from '../../shared/demo.js';
+import { rankCandidates, type UnrankedCandidate } from '../../shared/election.js';
+import type { ElectionSnapshot } from '../../shared/types.js';
+import { ProviderUnavailableError, type ElectionProvider, type ProviderResult } from './ElectionProvider.js';
 
 /**
  * Gera uma apuração 100% FICTÍCIA para testar a interface antes da eleição.

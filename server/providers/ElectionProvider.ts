@@ -1,4 +1,4 @@
-import type { CandidateResult, ElectionSnapshot } from '../../shared/types';
+import type { CandidateResult, ElectionSnapshot } from '../../shared/types.js';
 
 export interface ProviderResult {
   /** Snapshots em ordem cronológica. O último é o estado atual. */

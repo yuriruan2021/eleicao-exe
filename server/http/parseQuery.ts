@@ -1,5 +1,5 @@
-import { isDemoScenario, type DemoScenario } from '../../shared/demo';
-import type { DataMode } from '../../shared/types';
+import { isDemoScenario, type DemoScenario } from '../../shared/demo.js';
+import type { DataMode } from '../../shared/types.js';
 
 const DEFAULT_SCENARIO: DemoScenario = 'virada';
 const MAX_CLOCK_SKEW_MS = 24 * 60 * 60 * 1000;
