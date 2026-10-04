@@ -149,8 +149,8 @@ export function DashboardPage() {
             {renderElection()}
           </div>
 
-          <div className={cn('mt-6', tabVisibility('sobre', activeTab))}>
-            <AboutSection />
+          <div className={cn('mt-6', activeTab !== 'sobre' && activeTab !== 'placar' && 'hidden lg:block')}>
+            <AboutSection activeTab={activeTab} />
           </div>
         </main>
 

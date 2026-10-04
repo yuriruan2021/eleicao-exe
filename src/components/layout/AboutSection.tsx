@@ -1,6 +1,9 @@
 import type { CSSProperties } from 'react';
 import { Database, FlaskConical, MessagesSquare, ShieldCheck, type LucideIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import type { DashboardTab } from '@/types/dashboard';
 import { FRIENDS, getFriendInitials } from '@/utils/friends';
+import { tabVisibility } from '@/utils/tabs';
 import { CreatorCard } from './CreatorCredit';
 import { WindowTitle } from './WindowTitle';
 
@@ -22,11 +25,11 @@ const ABOUT_TOPICS: { icon: LucideIcon; title: string; text: string }[] = [
   },
 ];
 
-function AboutPanel() {
+function AboutPanel({ className }: { className?: string }) {
   return (
     <section
       aria-labelledby="about-title"
-      className="overflow-hidden rounded-2xl border border-line bg-panel lg:col-span-5"
+      className={cn('overflow-hidden rounded-2xl border border-line bg-panel lg:col-span-5', className)}
     >
       <WindowTitle>~/eleicao.exe/sobre.txt</WindowTitle>
       <div className="p-5 sm:p-7">
@@ -63,11 +66,11 @@ function AboutPanel() {
   );
 }
 
-function FriendMessages() {
+function FriendMessages({ className }: { className?: string }) {
   return (
     <section
       aria-labelledby="friends-title"
-      className="overflow-hidden rounded-2xl border border-line bg-panel lg:col-span-7"
+      className={cn('overflow-hidden rounded-2xl border border-line bg-panel lg:col-span-7', className)}
     >
       <WindowTitle>#grupo-da-apuração</WindowTitle>
       <div className="p-5 sm:p-7">
@@ -121,11 +124,16 @@ function FriendMessages() {
   );
 }
 
-export function AboutSection() {
+interface AboutSectionProps {
+  activeTab: DashboardTab;
+}
+
+/** No celular os recados ficam no fim do placar e o "sobre" fica na aba própria. */
+export function AboutSection({ activeTab }: AboutSectionProps) {
   return (
     <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-12">
-      <AboutPanel />
-      <FriendMessages />
+      <AboutPanel className={tabVisibility('sobre', activeTab)} />
+      <FriendMessages className={tabVisibility('placar', activeTab)} />
     </div>
   );
 }
